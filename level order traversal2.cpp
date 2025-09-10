@@ -7,7 +7,7 @@ public:
 
     void lOrder(TreeNode* root, vector<vector<int>>& ans, int level){
         if (root == NULL) return;
-        if (level >= (int)ans.size()) ans.resize(level + 1);
+        //if (level >= (int)ans.size()) ans.resize(level + 1);
         ans[level].push_back(root->val);
         lOrder(root->left, ans, level + 1);
         lOrder(root->right, ans, level + 1);
